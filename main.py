@@ -50,17 +50,17 @@ async def area_and_street(message: Message):
 
     if msg == 'ворошиловский':
         await message.answer(f'Вы видите все адреса объектов района {area}', reply_markup=keyboard.area_kb_vor())
-    elif msg == 'цетральный':
+    elif msg == 'центральный':
         area = 'Центральный'
         await message.answer(f'Вы видите все адреса объектов района {area}', reply_markup=keyboard.area_kb_centr())    
     elif msg == 'краснооктябрьский':
         area = 'Краснооктябрьский'
         await message.answer(f'Вы видите все адреса объектов района {area}', reply_markup=keyboard.area_kb_ko())
-    elif msg == 'совесткий':
+    elif msg == 'советсткий':
         area = 'Советский'
         await message.answer(f'Вы видите все адреса объектов района {area}', reply_markup=keyboard.area_kb_sov())
     elif msg == 'кировский':
-        area = 'Кировский '
+        area = 'Кировский'
         await message.answer(f'Вы видите все адреса объектов района {area}', reply_markup=keyboard.area_kb_kir())
 
 
