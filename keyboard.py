@@ -63,8 +63,10 @@ area_kb = ReplyKeyboardMarkup(
 
 add_kb = ReplyKeyboardMarkup(
     keyboard=[
-        InlineKeyboardButton(text='VKontakte', url="https://vk.com/v.fatt"),
-        InlineKeyboardButton(text='Telegram', url="t.me//moy_korolb")
+        [
+            InlineKeyboardButton(text='VKontakte', url="https://vk.com/v.fatt"),
+            InlineKeyboardButton(text='Telegram', url="t.me//moy_korolb")
+        ]
     ],
     resize_keyboard=True
 )
