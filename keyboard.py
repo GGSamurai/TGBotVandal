@@ -4,6 +4,7 @@ from aiogram.types import (
     InlineKeyboardButton,
     InlineKeyboardMarkup
 )
+from aiogram.utils.keyboard import InlineKeyboardBuilder
 
 main_kb = ReplyKeyboardMarkup(
     keyboard =[
@@ -13,7 +14,7 @@ main_kb = ReplyKeyboardMarkup(
         ],
         [
             KeyboardButton(text = "Удалить объект"),
-            KeyboardButton(text = "Инфо о командах")
+            KeyboardButton(text = "Добавить объект")
         ]
     ],
     resize_keyboard=True,
@@ -70,3 +71,82 @@ add_delete_kb = InlineKeyboardMarkup(
     ],
     resize_keyboard=True
 )
+
+
+#Начинается полная путаница, пригтовьтесь, 5 районов = 5 кнопок, нажимая на которые, будут выходить инлайн кнопки с адресами
+
+def area_kb_vor():
+    items = [
+        "Мира 10","Мира 10","Мира 10","Мира 10",
+        "Мира 10","Мира 10","Мира 10","Мира 10",
+        "Мира 10","Мира 10","Мира 10","Мира 10",
+        "Мира 10","Мира 10","Мира 10","Мира 10",
+    ]
+    builder = InlineKeyboardBuilder()
+    [builder.button(text=item) for item in items]
+    builder.button(text="Назад")
+    builder.adjust(*[4]*4)
+
+    return builder.as_markup(resize_keyboard=True)
+
+def area_kb_ko():
+    items = [
+        "Мира 10","Мира 10","Мира 10","Мира 10",
+        "Мира 10","Мира 10","Мира 10","Мира 10",
+        "Мира 10","Мира 10","Мира 10","Мира 10",
+        "Мира 10","Мира 10","Мира 10","Мира 10",
+    ]
+    builder = InlineKeyboardBuilder()
+    [builder.button(text=item) for item in items]
+    builder.button(text="Назад")
+    builder.adjust(*[4]*4)
+
+    return builder.as_markup(resize_keyboard=True)
+
+
+def area_kb_kir():
+    items = [
+        "Мира 10","Мира 10","Мира 10","Мира 10",
+        "Мира 10","Мира 10","Мира 10","Мира 10",
+        "Мира 10","Мира 10","Мира 10","Мира 10",
+        "Мира 10","Мира 10","Мира 10","Мира 10",
+    ]
+    builder = InlineKeyboardBuilder()
+    [builder.button(text=item) for item in items]
+    builder.button(text="Назад")
+    builder.adjust(*[4]*4)
+
+    return builder.as_markup(resize_keyboard=True)
+
+
+def area_kb_sov():
+    items = [
+        "Мира 10","Мира 10","Мира 10","Мира 10",
+        "Мира 10","Мира 10","Мира 10","Мира 10",
+        "Мира 10","Мира 10","Мира 10","Мира 10",
+        "Мира 10","Мира 10","Мира 10","Мира 10",
+    ]
+    builder = InlineKeyboardBuilder()
+    [builder.button(text=item) for item in items]
+    builder.button(text="Назад")
+    builder.adjust(*[4]*4)
+
+    return builder.as_markup(resize_keyboard=True)
+
+
+def area_kb_centr():
+    items = [
+        "Мира 10","Мира 10","Мира 10","Мира 10",
+        "Мира 10","Мира 10","Мира 10","Мира 10",
+        "Мира 10","Мира 10","Мира 10","Мира 10",
+        "Мира 10","Мира 10","Мира 10","Мира 10",
+    ]
+    builder = InlineKeyboardBuilder()
+    [builder.button(text=item) for item in items]
+    builder.button(text="Назад")
+    builder.adjust(*[4]*4)
+
+    return builder.as_markup(resize_keyboard=True)
+
+
+

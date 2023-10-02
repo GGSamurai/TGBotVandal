@@ -43,6 +43,27 @@ async def echo(message: Message):
         await message.answer('Вы можете добавить новый объект, подвергшийся действиям вандализма через администратора бота', reply_markup=keyboard.add_delete_kb)
 
 
+@dp.message()
+async def area_and_street(message: Message):
+    area = var.start_area
+    msg = message.text.lower()
+
+    if msg == 'ворошиловский':
+        await message.answer(f'Вы видите все адреса объектов района {area}', reply_markup=keyboard.area_kb_vor())
+    elif msg == 'цетральный':
+        area = 'Центральный'
+        await message.answer(f'Вы видите все адреса объектов района {area}', reply_markup=keyboard.area_kb_centr())    
+    elif msg == 'краснооктябрьский':
+        area = 'Краснооктябрьский'
+        await message.answer(f'Вы видите все адреса объектов района {area}', reply_markup=keyboard.area_kb_ko())
+    elif msg == 'совесткий':
+        area = 'Советский'
+        await message.answer(f'Вы видите все адреса объектов района {area}', reply_markup=keyboard.area_kb_sov())
+    elif msg == 'кировский':
+        area = 'Кировский '
+        await message.answer(f'Вы видите все адреса объектов района {area}', reply_markup=keyboard.area_kb_kir())
+
+
 async def main():
     await bot.delete_webhook(drop_pending_updates=True)
     await dp.start_polling(bot)
