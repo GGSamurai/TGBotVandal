@@ -29,7 +29,13 @@ async def menu_func (message: Message):
 
 @dp.message(Command("info"))
 async def information(message: Message):
-    await message.answer('<b>Добро пожаловать в бота!</b>\n Данный бот служт для того, чтобы предать огласке проблему вандализма\n Разработчики не пропагандируют данное движение, но просят не портить окр.среду\n\n Вандализм уголовно наказуемое преступление, творите добро и приятного пользования ботом!')
+    await message.answer('<b>Добро пожаловать в VandalVlgBot!</b>\n Данный бот служт для того, чтобы предать огласке проблему вандализма\n Разработчики не пропагандируют данное движение, но просят не портить окр.среду\n\n Вандализм уголовно наказуемое преступление, творите добро и приятного пользования ботом!')
+
+@dp.message(F.text=='/send_image')
+async def cmd_send_image(message: Message):
+    await message.answer_photo(photo="AgACAgIAAxkBAAICM2UaRU_SoH3vUeHvF5pFlkotXXNeAAKBzjEbcNrRSJH0D5zhkuJFAQADAgADeQADMAQ", caption='Стена')
+    await message.answer_photo(photo="AgACAgIAAxkBAAICMWUaRToU5QQMrU3mCCShVXteN8ZYAAJ_zjEbcNrRSDIO5-ntIiDVAQADAgADeQADMAQ", caption='Вход')
+
 
 
 @dp.message() #Принимаем сообщение от пользователя 
@@ -58,8 +64,12 @@ async def echo(message: Message):
         await message.answer(f'Вы видите все адреса объектов района {area}', reply_markup=keyboard.area_kir())
     elif msg == 'назад':
         await message.answer('Выберите район', reply_markup=keyboard.area_kb)
-    
-
+    elif msg == 'благотворительность':
+        await message.answer('Дабы поднять мотивацию для благодеятелей, наша команда решила ввести рекламу в боте.\nЧтобы попасть к нам в избранные закрашивай графити на отмеченных объектах\nи присылай в телеграмм или вк админу фото и видео подтверждение.', reply_markup=keyboard.add_delete_kb)
+    elif msg == 'мира 30':
+        await message.answer_photo(photo="AgACAgIAAxkBAAICM2UaRU_SoH3vUeHvF5pFlkotXXNeAAKBzjEbcNrRSJH0D5zhkuJFAQADAgADeQADMAQ", caption='Стена')
+        await message.answer_photo(photo="AgACAgIAAxkBAAICMWUaRToU5QQMrU3mCCShVXteN8ZYAAJ_zjEbcNrRSDIO5-ntIiDVAQADAgADeQADMAQ", caption='Вход')
+        
 async def main():
     await bot.delete_webhook(drop_pending_updates=True)
     await dp.start_polling(bot)

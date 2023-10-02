@@ -10,7 +10,7 @@ main_kb = ReplyKeyboardMarkup(
     keyboard =[
         [
             KeyboardButton(text = "Районы"),
-            KeyboardButton(text = "Показать адреса")
+            KeyboardButton(text = "Благотворительность")
         ],
         [
             KeyboardButton(text = "Удалить объект"),
@@ -28,7 +28,7 @@ menu_kb = ReplyKeyboardMarkup(
     keyboard =[
         [
             KeyboardButton(text = "Районы"),
-            KeyboardButton(text = "Показать адреса")
+            KeyboardButton(text = "Благотворительность")
         ],
         [
             KeyboardButton(text = "Удалить объект"),
