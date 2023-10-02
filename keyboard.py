@@ -61,7 +61,7 @@ area_kb = ReplyKeyboardMarkup(
     selective=True
 )
 
-add_kb = InlineKeyboardMarkup(
+add_delete_kb = InlineKeyboardMarkup(
     inline_keyboard=[
         [
             InlineKeyboardButton(text='VKontakte', url="https://vk.com/v.fatt"),
