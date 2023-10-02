@@ -22,6 +22,25 @@ main_kb = ReplyKeyboardMarkup(
     selective=True
 )
 
+
+menu_kb = ReplyKeyboardMarkup(
+    keyboard =[
+        [
+            KeyboardButton(text = "Районы"),
+            KeyboardButton(text = "Показать адреса")
+        ],
+        [
+            KeyboardButton(text = "Удалить объект"),
+            KeyboardButton(text = "Инфо о командах")
+        ]
+    ],
+    resize_keyboard=True,
+    one_time_keyboard=True,
+    input_field_placeholder='Выберите действие из меню',
+    selective=True
+)
+
+
 area_kb = ReplyKeyboardMarkup(
     keyboard = [
         [

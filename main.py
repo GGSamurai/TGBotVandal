@@ -4,6 +4,7 @@ from aiogram.filters import Command
 from aiogram.types import Message
 
 import keyboard
+import var
 
 bot = Bot('6682215796:AAEall5HxrX3328CmjhcO0I7iRgNvWBs9nk')
 dp = Dispatcher()
@@ -19,6 +20,10 @@ async def start(message: Message):
 async def area(message: Message):
     await message.answer('Вы видите все доступные на данный момент районы города Волгоград', reply_markup=keyboard.area_kb)
 
+
+@dp.message(Command("menu"))
+async def menu_func (message: Message):
+    await message.answer('Выберите действие из меню', reply_markup=keyboard.menu_kb)
 
 
 @dp.message() #Принимаем сообщение от пользователя 
