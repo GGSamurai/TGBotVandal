@@ -21,9 +21,12 @@ async def area(message: Message):
     await message.answer('Вы видите все доступные на данный момент районы города Волгоград', reply_markup=keyboard.area_kb)
 
 
-@dp.message(Command("menu"))
+@dp.message(Command("menu"))#Ответ на команду /menu
 async def menu_func (message: Message):
     await message.answer('Выберите действие из меню', reply_markup=keyboard.menu_kb)
+
+
+@dp.message()
 
 
 @dp.message() #Принимаем сообщение от пользователя 
@@ -33,8 +36,9 @@ async def echo(message: Message):
     if msg == 'районы': #Если пользователь нажал на кнопку "Районы", то
         await message.answer('Вы видите все доступные на данный момент районы города Волгоград', reply_markup=keyboard.area_kb) #Выводим новую клавиатуру с районами
     elif msg == 'показать адреса':#Если пользовател нажал на кнопку "Показать адреса, то"
-        await message.answer(f'Выберите доступные адреса по району') #Показываем адреса по выбранному району (Стандартно стоит Ворошиловский)"
-
+        await message.answer(f'Выберите доступные адреса по району {var.start_area}') #Показываем адреса по выбранному району (Стандартно стоит Ворошиловский)"
+    elif msg == 'удалить объект':
+        await message.answer('Вы можете отправить фотоотчёт о том, что объект облагородили и мы удалим его из базы данных', keyboard=keyboard.add_kb)
 
 
 async def main():

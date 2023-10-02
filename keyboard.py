@@ -60,3 +60,11 @@ area_kb = ReplyKeyboardMarkup(
     input_field_placeholder='Выберите район из меню',
     selective=True
 )
+
+add_kb = ReplyKeyboardMarkup(
+    keyboard=[
+        InlineKeyboardButton(text='VKontakte', url="https://vk.com/v.fatt"),
+        InlineKeyboardButton(text='Telegram', url="t.me//moy_korolb")
+    ],
+    resize_keyboard=True
+)
