@@ -31,7 +31,7 @@ menu_kb = ReplyKeyboardMarkup(
         ],
         [
             KeyboardButton(text = "Удалить объект"),
-            KeyboardButton(text = "Инфо о командах")
+            KeyboardButton(text = "Добавить объект")
         ]
     ],
     resize_keyboard=True,

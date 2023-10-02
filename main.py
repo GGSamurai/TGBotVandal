@@ -39,7 +39,7 @@ async def echo(message: Message):
         await message.answer(f'Выберите доступные адреса по району {var.start_area}') #Показываем адреса по выбранному району (Стандартно стоит Ворошиловский)"
     elif msg == 'удалить объект':
         await message.answer('Вы можете отправить фотоотчёт о том, что объект облагородили и мы удалим его из базы данных', reply_markup=keyboard.add_delete_kb)
-    elif msg == 'удалить объект':
+    elif msg == 'добавить объект':
         await message.answer('Вы можете добавить новый объект, подвергшийся действиям вандализма через администратора бота', reply_markup=keyboard.add_delete_kb)
 
 
