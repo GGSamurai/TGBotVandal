@@ -41,4 +41,3 @@ area_kb = ReplyKeyboardMarkup(
     input_field_placeholder='Выберите район из меню',
     selective=True
 )
-s
