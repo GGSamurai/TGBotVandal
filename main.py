@@ -69,6 +69,9 @@ async def echo(message: Message):
     elif msg == 'мира 30':
         await message.answer_photo(photo="AgACAgIAAxkBAAICM2UaRU_SoH3vUeHvF5pFlkotXXNeAAKBzjEbcNrRSJH0D5zhkuJFAQADAgADeQADMAQ", caption='Стена')
         await message.answer_photo(photo="AgACAgIAAxkBAAICMWUaRToU5QQMrU3mCCShVXteN8ZYAAJ_zjEbcNrRSDIO5-ntIiDVAQADAgADeQADMAQ", caption='Вход')
+    else:
+        await message.answer('Вы ввели не корректный запрос')
+
         
 async def main():
     await bot.delete_webhook(drop_pending_updates=True)
